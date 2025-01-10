@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación de Hojas de Papel Reciclado</title>
+    <style>
+        body {
+            font-family: Candara, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
+            transition: background-color 0.5s ease;
+        }
+        header {
+            background-color: #5a947c;
+            color: rgb(19, 18, 18);
+            padding: 300px;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            font-size: 8rem; /* Incrementado */
+            font-weight: bold;
+            margin: 0;
+        }
+        .buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        .button {
+            display: block;
+            padding: 15px 25px; /* Incrementado */
+            text-align: center;
+            background-color: #92b3c9;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px; /* Incrementado */
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #b7a4e4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 50px;
+        }
+        .section {
+            margin-top: 20px;
+            display: none;
+        }
+        .step img, .campaign img {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        h2, h3 {
+            font-size: 3rem; /* Incrementado */
+        }
+        p {
+            font-size: 2rem; /* Incrementado */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RENOVABLOC</h1>
+        <div class="buttons">
+            <a href="#" class="button" id="stepsButton">Pasos para Crear Papel</a>
+            <a href="#" class="button" id="campaignsButton">Campañas de Reciclaje</a>
+        </div>
+        <p style="font-size: 1.5rem;">Descubre cómo transformar papel usado en nuevas hojas.</p>
+    </header>
+
+    <div class="container">
+        <!-- Pasos para crear papel reciclado -->
+        <div class="section" id="stepsSection">
+            <h2>Paso a Paso</h2>
+            <div class="step">
+                <img src="paso1.png" alt="Recolección de papel">
+                <h3>Paso 1: Recolecta Papel Usado</h3>
+                <p>Busca papel que ya no uses, como revistas, periódicos o hojas de cuadernos.</p>
+            </div>
+            <div class="step">
+                <img src="paso2.png" alt="Triturar papel">
+                <h3>Paso 2: Tritura el Papel</h3>
+                <p>Corta el papel en pequeños trozos para facilitar el proceso.</p>
+            </div>
+            <div class="step">
+                <img src="paso3.png" alt="Mezclar y crear pasta">
+                <h3>Paso 3: Haz una Pasta</h3>
+                <p>Coloca el papel en agua y mézclalo hasta obtener una pasta homogénea.</p>
+            </div>
+            <div class="step">
+                <img src="paso5.png" alt="Formar hojas">
+                <h3>Paso 4: Forma las Hojas</h3>
+                <p>Usa un marco para darle forma a tus nuevas hojas de papel reciclado.</p>
+            </div>
+        </div>
+        <div class="step">
+            <img src="paso6.png" alt="secar las hojas ">
+            <h3>Paso 5: secar las hojas </h3>
+            <p>Dejar secar la hoja y despues de unas horas ya tendras una hoja nueva.</p>
+        </div>
+    </div>
+        </div>
+
+        <!-- Campañas de reciclaje -->
+        <div class="section" id="campaignsSection">
+            <div style="text-align: center;">
+                <img src="diseño.png" alt="Imagen Campaña" style="max-width: 600%;">
+            </div>
+            <div class="campaign">
+                <a href="campaña1.pdf" target="_blank">
+                    <h3>Campaña de Reciclaje de Hojas de Papel</h3>
+                </a>
+                <p>Únete a nuestra iniciativa de reciclar papel en tu comunidad.</p>
+            </div>
+            <div class="campaign">
+                <a href="campaña2.pdf" target="_blank">
+                    <h3>Escuelas Verdes</h3>
+                </a>
+                <p>Apoyamos a escuelas para implementar programas de reciclaje de papel.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("stepsButton").addEventListener("click", () => {
+            document.body.style.backgroundColor = "#d5f5e3";
+            document.getElementById("stepsSection").style.display = "block";
+            document.getElementById("campaignsSection").style.display = "none";
+        });
+
+        document.getElementById("campaignsButton").addEventListener("click", () => {
+            document.body.style.backgroundColor = "#fbe7c6";
+            document.getElementById("campaignsSection").style.display = "block";
+            document.getElementById("stepsSection").style.display = "none";
+        });
+    </script>
+</body>
+</html>
